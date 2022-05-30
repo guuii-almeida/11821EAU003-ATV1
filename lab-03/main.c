@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdint.h>
 
 /* AHB1 Base Addresses ******************************************************/
 
@@ -23,7 +24,6 @@
 /* Register Addresses *******************************************************/
 
 #define STM32_RCC_AHB1ENR (STM32_RCC_BASE+STM32_RCC_AHB1ENR_OFFSET)
-
 #define STM32_GPIOC_MODER (STM32_GPIOC_BASE+STM32_GPIO_MODER_OFFSET)
 #define STM32_GPIOC_OTYPER (STM32_GPIOC_BASE+STM32_GPIO_OTYPER_OFFSET)
 #define STM32_GPIOC_PUPDR (STM32_GPIOC_BASE+STM32_GPIO_PUPDR_OFFSET)
@@ -61,6 +61,7 @@
 
 #define GPIO_BSRR_SET(n) (1 << (n))
 #define GPIO_BSRR_RST(n) (1 << (n + 16))
+#define LED_DELAY 5000
 
 static const char fw_version[] = {'V', '1', '.', '0'};
 static uint32_t led_status;
@@ -110,8 +111,8 @@ int main(int argc, char *argv[])
         for (uint32_t i = 0; i < LED_DELAY; i++);
 
     }
-
     /* Nao deveria chegar aqui */
 
     return EXIT_SUCCESS;
+    
 }
