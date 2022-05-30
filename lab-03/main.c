@@ -21,21 +21,21 @@
 
 int main(int argc, char *argv[])
 {
-uint32_t reg;
+    uint32_t reg;
 
-/* Ponteiros para registradores */
+    /* Ponteiros para registradores */
 
-uint32_t *pRCC_AHB1ENR = (uint32_t *)STM32_RCC_AHB1ENR;
+    uint32_t *pRCC_AHB1ENR = (uint32_t *)STM32_RCC_AHB1ENR;
 
-/* Habilita clock GPIOC */
+    /* Habilita clock GPIOC */
 
-reg = *pRCC_AHB1ENR;
-reg |= RCC_AHB1ENR_GPIOCEN;
-*pRCC_AHB1ENR = reg;
+    reg = *pRCC_AHB1ENR;
+    reg |= RCC_AHB1ENR_GPIOCEN;
+    *pRCC_AHB1ENR = reg;
 
-while(1);
+    while(1);
 
-/* Nao deveria chegar aqui */
+    /* Nao deveria chegar aqui */
 
-return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }
