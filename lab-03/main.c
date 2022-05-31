@@ -27,6 +27,7 @@
 #define STM32_GPIOC_MODER (STM32_GPIOC_BASE+STM32_GPIO_MODER_OFFSET)
 #define STM32_GPIOC_OTYPER (STM32_GPIOC_BASE+STM32_GPIO_OTYPER_OFFSET)
 #define STM32_GPIOC_PUPDR (STM32_GPIOC_BASE+STM32_GPIO_PUPDR_OFFSET)
+#define STM32_GPIOC_BSRR (STM32_GPIOC_BASE + STM32_GPIO_BSRR_OFFSET)
 
 /* AHB1 Peripheral Clock enable register */
 
@@ -103,10 +104,10 @@ int main(int argc, char *argv[])
 
     while(1)
     {
-        *pGPIOC_BSRR = GPIO_BSRR13_SET;
+        *pGPIOC_BSRR = GPIO_BSRR_SET(13);
         led_status = 0;
         for (uint32_t i = 0; i < LED_DELAY; i++);
-        *pGPIOC_BSRR = GPIO_BSRR13_RESET;
+        *pGPIOC_BSRR = GPIO_BSRR_RST(13);
         led_status = 1;
         for (uint32_t i = 0; i < LED_DELAY; i++);
 
