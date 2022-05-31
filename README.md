@@ -1,4 +1,4 @@
-##OS ARQUIVOS FINAIS ESTÃO NA PASTA SRC, AS PASTAS LAB-02 e LAB-03 MOSTRAM O HISTÓRICO de COMMITS##
+##OS ARQUIVOS FINAIS ESTÃO NA PASTA SRC, ESQUECI DE CRIAR A PASTA SRC INICIALMENTE##
 
 Após a configuração do ambiente bare metal de desenvolvimento, o projeto para a criação do primeiro projeto "pisca LED" foi iniciado.
 
