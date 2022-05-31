@@ -1,3 +1,5 @@
+##OS ARQUIVOS FINAIS ESTÃO NA PASTA SRC, AS PASTAS LAB-02 e LAB-03 MOSTRAM O HISTÓRICO de COMMITS##
+
 Após a configuração do ambiente bare metal de desenvolvimento, o projeto para a criação do primeiro projeto "pisca LED" foi iniciado.
 
 Durante a realização do Laboratório 2 os arquivos de partida foram criados juntamente ao processo de compilação para um sistema Cortex-M. Deste modo, iniciamos a craição de um firmware para piscar o LED integrado da placa STM32.
